@@ -39,7 +39,6 @@ sites:
       - 502
 
 status-website:
-  baseUrl: /sate-uptime
   name: SATE Status
   introTitle: "SATE service status"
   introMessage: "Live status and 90-day uptime history for SATE services (recorder backend, apps, AI pipeline)."
