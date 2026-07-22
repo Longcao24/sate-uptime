@@ -1,31 +1,50 @@
-# Change these first
-owner: upptime # Your GitHub organization or username, where this repository lives
-repo: upptime # The name of this repository
+owner: Longcao24
+repo: sate-uptime
 
 sites:
-  - name: Google
-    url: https://www.google.com
-  - name: Wikipedia
-    url: https://en.wikipedia.org
-  - name: Hacker News
-    url: https://news.ycombinator.com
-  - name: Test Broken Site
-    url: https://thissitedoesnotexist.koj.co
+  - name: Docs site
+    url: https://sate-docs.pages.dev
+  - name: Service monitor
+    url: https://sate-monitor.pages.dev
+  - name: Status (CF worker)
+    url: https://sate-status.longcao.workers.dev
+  - name: device-api
+    url: https://zlgdpivcbmaodgokkdvz.functions.supabase.co/device-api/firmware/latest
+    expectedStatusCodes:
+      - 200
+      - 401
+      - 404
+  - name: Supabase API
+    url: https://zlgdpivcbmaodgokkdvz.supabase.co/rest/v1/
+    expectedStatusCodes:
+      - 200
+      - 401
+      - 404
+  - name: Storage (firmware)
+    url: https://zlgdpivcbmaodgokkdvz.supabase.co/storage/v1/object/public/firmware/
+    expectedStatusCodes:
+      - 200
+      - 400
+      - 404
+  - name: cf-processor
+    url: https://sate-processor.longcao.workers.dev/
+    expectedStatusCodes:
+      - 200
+      - 404
+  - name: AI /process
+    url: https://sate-v1-5.ngrok.io/
+    expectedStatusCodes:
+      - 200
+      - 404
+      - 502
 
 status-website:
-  # Add your custom domain name, or remove the `cname` line if you don't have a domain
-  # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
-  cname: demo.upptime.js.org
-  # baseUrl: /your-repo-name
-  logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
-  name: Upptime
-  introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
-  introMessage: This is a sample status page which uses **real-time** data from our [GitHub repository](https://github.com/upptime/upptime). No server required — just GitHub Actions, Issues, and Pages. [**Get your own for free**](https://github.com/upptime/upptime)
+  baseUrl: /sate-uptime
+  name: SATE Status
+  introTitle: "SATE service status"
+  introMessage: "Live status and 90-day uptime history for SATE services (recorder backend, apps, AI pipeline)."
   navbar:
     - title: Status
       href: /
     - title: GitHub
-      href: https://github.com/$OWNER/$REPO
-
-# Upptime also supports notifications, assigning issues, and more
-# See https://upptime.js.org/docs/configuration
+      href: https://github.com/Longcao24/sate-uptime
